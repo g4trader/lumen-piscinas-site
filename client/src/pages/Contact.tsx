@@ -54,8 +54,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-bold text-primary">E-mail</h4>
-                      <a href="mailto:lumenpiscinaselazer@gmail.com" className="text-lg font-medium hover:text-secondary transition-colors block break-all">
-                        lumenpiscinaselazer@gmail.com
+                      <a href="mailto:comercial@lumenpiscinas.com.br" className="text-lg font-medium hover:text-secondary transition-colors block break-all">
+                        comercial@lumenpiscinas.com.br
                       </a>
                     </div>
                   </div>

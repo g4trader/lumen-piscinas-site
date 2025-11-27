@@ -26,6 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "Sobre", href: "/sobre" },
     { name: "Serviços", href: "/servicos" },
     { name: "Portfólio", href: "/portfolio" },
+    { name: "Blog", href: "/blog" },
     { name: "Contato", href: "/contato" },
   ];
 
@@ -164,7 +165,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <a href="https://instagram.com/lumenpiscinaselazer" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors">
                   <Instagram size={18} />
                 </a>
-                <a href="mailto:lumenpiscinaselazer@gmail.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors">
+                <a href="mailto:comercial@lumenpiscinas.com.br" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors">
                   <Mail size={18} />
                 </a>
               </div>
@@ -202,8 +203,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </li>
                 <li className="flex items-start gap-3">
                   <Mail size={16} className="mt-1 text-secondary" />
-                  <a href="mailto:lumenpiscinaselazer@gmail.com" className="hover:text-white transition-colors break-all">
-                    lumenpiscinaselazer@gmail.com
+                  <a href="mailto:comercial@lumenpiscinas.com.br" className="hover:text-white transition-colors break-all">
+                    comercial@lumenpiscinas.com.br
                   </a>
                 </li>
               </ul>

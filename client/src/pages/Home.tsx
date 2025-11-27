@@ -208,6 +208,89 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Blog Preview Section */}
+      <section className="py-24 bg-muted/30">
+        <div className="container">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div className="max-w-2xl">
+              <span className="text-secondary text-sm font-bold uppercase tracking-widest mb-4 block">Blog & Dicas</span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">Conteúdo Especializado</h2>
+              <p className="text-muted-foreground text-lg">
+                Fique por dentro das novidades, tendências e dicas de manutenção para sua piscina.
+              </p>
+            </div>
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white rounded-none px-8 py-6 shrink-0" asChild>
+              <Link href="/blog">Ver Todos os Artigos</Link>
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link href="/blog">
+              <a className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full">
+                <div className="aspect-[3/2] overflow-hidden">
+                  <img 
+                    src="/construction-process.jpg" 
+                    alt="Vantagens do Concreto" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-8">
+                  <span className="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Construção</span>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                    5 Vantagens de Construir uma Piscina de Concreto
+                  </h3>
+                  <p className="text-muted-foreground text-sm line-clamp-3">
+                    Descubra por que o concreto armado é a escolha superior para quem busca durabilidade e personalização.
+                  </p>
+                </div>
+              </a>
+            </Link>
+
+            <Link href="/blog">
+              <a className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full">
+                <div className="aspect-[3/2] overflow-hidden">
+                  <img 
+                    src="/hero-pool.jpg" 
+                    alt="Manutenção de Piscina" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-8">
+                  <span className="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Manutenção</span>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                    Como Manter a Água Sempre Cristalina
+                  </h3>
+                  <p className="text-muted-foreground text-sm line-clamp-3">
+                    Dicas essenciais de manutenção e tratamento químico para garantir a saúde da sua piscina.
+                  </p>
+                </div>
+              </a>
+            </Link>
+
+            <Link href="/blog">
+              <a className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full">
+                <div className="aspect-[3/2] overflow-hidden">
+                  <img 
+                    src="/night-pool.jpg" 
+                    alt="Iluminação LED" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-8">
+                  <span className="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Design</span>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                    Tendências de Iluminação para 2026
+                  </h3>
+                  <p className="text-muted-foreground text-sm line-clamp-3">
+                    Saiba como a iluminação LED RGB pode transformar o ambiente da sua piscina à noite.
+                  </p>
+                </div>
+              </a>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Feature Project */}
       <section className="py-0 bg-primary text-white overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
