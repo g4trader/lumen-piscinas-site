@@ -220,13 +220,12 @@ export default function Home() {
               </p>
             </div>
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white rounded-none px-8 py-6 shrink-0" asChild>
-              <Link href="/blog">Ver Todos os Artigos</Link>
+              <a href="https://lumenpiscinas.com.br/blog/" target="_blank" rel="noopener noreferrer">Ver Todos os Artigos</a>
             </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link href="/blog">
-              <a className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full">
+            <a href="https://lumenpiscinas.com.br/blog/" target="_blank" rel="noopener noreferrer" className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full">
                 <div className="aspect-[3/2] overflow-hidden">
                   <img 
                     src="/construction-process.jpg" 
@@ -244,10 +243,8 @@ export default function Home() {
                   </p>
                 </div>
               </a>
-            </Link>
 
-            <Link href="/blog">
-              <a className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full">
+            <a href="https://lumenpiscinas.com.br/blog/" target="_blank" rel="noopener noreferrer" className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full">
                 <div className="aspect-[3/2] overflow-hidden">
                   <img 
                     src="/hero-pool.jpg" 
@@ -264,11 +261,9 @@ export default function Home() {
                     Dicas essenciais de manutenção e tratamento químico para garantir a saúde da sua piscina.
                   </p>
                 </div>
-              </a>
-            </Link>
+            </a>
 
-            <Link href="/blog">
-              <a className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full">
+            <a href="https://lumenpiscinas.com.br/blog/" target="_blank" rel="noopener noreferrer" className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full">
                 <div className="aspect-[3/2] overflow-hidden">
                   <img 
                     src="/night-pool.jpg" 
@@ -285,8 +280,7 @@ export default function Home() {
                     Saiba como a iluminação LED RGB pode transformar o ambiente da sua piscina à noite.
                   </p>
                 </div>
-              </a>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

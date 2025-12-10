@@ -26,7 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "Sobre", href: "/sobre" },
     { name: "Serviços", href: "/servicos" },
     { name: "Portfólio", href: "/portfolio" },
-    { name: "Blog", href: "/blog" },
+    { name: "Blog", href: "https://lumenpiscinas.com.br/blog/" },
     { name: "Contato", href: "/contato" },
   ];
 
@@ -70,23 +70,49 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <a
-                  className={cn(
-                    "text-sm font-medium uppercase tracking-wider hover:text-secondary transition-colors relative group",
-                    isScrolled ? "text-foreground" : "text-white/90",
-                    location === link.href && "text-secondary"
-                  )}
-                >
+            {navLinks.map((link) => {
+              const isExternal = link.href.startsWith('http');
+              const linkContent = (
+                <>
                   {link.name}
                   <span className={cn(
                     "absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full",
                     location === link.href ? "w-full" : ""
                   )} />
-                </a>
-              </Link>
-            ))}
+                </>
+              );
+              
+              if (isExternal) {
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      "text-sm font-medium uppercase tracking-wider hover:text-secondary transition-colors relative group",
+                      isScrolled ? "text-foreground" : "text-white/90"
+                    )}
+                  >
+                    {linkContent}
+                  </a>
+                );
+              }
+              
+              return (
+                <Link key={link.href} href={link.href}>
+                  <a
+                    className={cn(
+                      "text-sm font-medium uppercase tracking-wider hover:text-secondary transition-colors relative group",
+                      isScrolled ? "text-foreground" : "text-white/90",
+                      location === link.href && "text-secondary"
+                    )}
+                  >
+                    {linkContent}
+                  </a>
+                </Link>
+              );
+            })}
             <Button 
               variant={isScrolled ? "default" : "outline"} 
               className={cn(
@@ -118,13 +144,29 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-background pt-24 px-6 md:hidden animate-in slide-in-from-top-10 fade-in duration-300">
           <nav className="flex flex-col gap-6 text-center">
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <a className="text-2xl font-serif font-medium text-foreground hover:text-secondary transition-colors">
-                  {link.name}
-                </a>
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isExternal = link.href.startsWith('http');
+              if (isExternal) {
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl font-serif font-medium text-foreground hover:text-secondary transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                );
+              }
+              return (
+                <Link key={link.href} href={link.href}>
+                  <a className="text-2xl font-serif font-medium text-foreground hover:text-secondary transition-colors">
+                    {link.name}
+                  </a>
+                </Link>
+              );
+            })}
             <div className="mt-8 flex flex-col gap-4">
               <Button className="w-full rounded-none py-6 text-lg font-serif italic" asChild>
                 <a href="https://wa.me/5551991579710" target="_blank" rel="noopener noreferrer">
