@@ -38,8 +38,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
           isScrolled
             ? "bg-white/90 backdrop-blur-md py-3 shadow-sm border-border/40"
-            : "bg-transparent py-6 text-white"
+            : "bg-black py-6 text-white"
         )}
+        style={!isScrolled ? { backgroundColor: '#000000' } : {}}
       >
         <div className="container flex items-center justify-between">
           <Link href="/">
